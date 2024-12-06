@@ -1,5 +1,7 @@
 package com.tomio.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tomio.recipe.Recipe;
 import jakarta.persistence.*;
 
@@ -16,20 +18,19 @@ public class UserProfile {
     @Column(unique = true, nullable = false)
     private String email;
     @Column(nullable = false)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
-
     @OneToMany(mappedBy = "user")
     private List<Recipe> recipe;
 
     public UserProfile() {}
 
-    public UserProfile(Integer id, String username, String email, String password, List<Recipe> recipe) {
-        this.userId = id;
+    public UserProfile( String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.recipe = recipe;
     }
+
 
     public Integer getUserId() {
         return userId;

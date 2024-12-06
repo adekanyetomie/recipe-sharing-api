@@ -1,4 +1,4 @@
-package com.tomio.recipe;
+package com.tomio.recipe.ingredient;
 
 public enum MeasurementUnit {
     Tablespoon,

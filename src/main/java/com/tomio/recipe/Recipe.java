@@ -1,5 +1,7 @@
 package com.tomio.recipe;
 
+import com.tomio.recipe.image.RecipeImage;
+import com.tomio.recipe.ingredient.RecipeIngredient;
 import com.tomio.user.UserProfile;
 import jakarta.persistence.*;
 

@@ -1,5 +1,6 @@
-package com.tomio.recipe;
+package com.tomio.recipe.image;
 
+import com.tomio.recipe.Recipe;
 import jakarta.persistence.*;
 
 import java.util.Objects;
