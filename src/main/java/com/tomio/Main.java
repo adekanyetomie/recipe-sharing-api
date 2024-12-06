@@ -19,6 +19,8 @@ public class Main {
     }
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
 
+
+    //cleanup later
     @Bean
     CommandLineRunner runner(UserRepository userRepository) {
         return args -> {
